@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function getCovidapi() {
+        const jsondata = await fetch("https://api.covid19api.com/summary")
+
+        const jsdata = await jsondata.json()
+        console.log(jsdata.Countries[77].Country)
+      }
+      getCovidapi()
+    </script>
+  </body>
+</html>
